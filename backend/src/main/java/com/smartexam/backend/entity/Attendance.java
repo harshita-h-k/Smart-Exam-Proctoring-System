@@ -4,29 +4,24 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @Entity
-@Table(name="attendance")
+@Table(name = "attendance")
 public class Attendance extends BaseEntity {
-
 
     private Long studentId;
 
-
     private Long examId;
-
 
     private boolean present;
 
+    private LocalDateTime loginTime;
 
-    private String loginTime;
+    private LocalDateTime logoutTime;
 
-
-    private String logoutTime;
-
-
-    private Double duration;
+    private Long duration;
 
 }
